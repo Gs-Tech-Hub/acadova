@@ -1,72 +1,65 @@
-import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { GraduationCap } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="border-t bg-background">
-      <div className="container flex flex-col gap-8 py-12 md:py-16">
-        <div className="flex flex-col gap-6 md:flex-row md:justify-between">
-          <div className="space-y-4">
-            <h3 className="font-heading text-xl">Accelerator Program</h3>
-            <p className="text-sm text-muted-foreground">
-              Empowering startups to reach their full potential
+    <footer className="bg-[#0b2d52] text-white">
+      <div className="mx-auto max-w-7xl px-6 py-12 sm:px-8 sm:py-14">
+        <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
+          <div className="max-w-sm">
+            <Link href="/" className="inline-flex items-center gap-2.5">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-[#f4b942]">
+                <GraduationCap className="h-6 w-6" aria-hidden="true" />
+              </span>
+              <span className="font-heading text-xl font-extrabold tracking-[-0.04em]">
+                acadova<span className="text-[#f4b942]">.</span>
+              </span>
+            </Link>
+            <p className="mt-4 text-sm leading-6 text-white/65">
+              A place to learn with purpose, grow with confidence, and lead with curiosity.
             </p>
+            <p className="mt-5 font-heading text-sm font-bold text-[#f4b942]">Learn. Grow. Lead.</p>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+
+          <div className="flex gap-12">
             <div className="space-y-3">
-              <h4 className="font-heading text-sm">Program</h4>
+              <h2 className="text-xs font-bold uppercase tracking-[0.16em] text-white/50">
+                Explore
+              </h2>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="/programs" className="text-muted-foreground hover:text-foreground">
-                    Programs
+                  <Link href="/programs" className="text-white/80 transition-colors hover:text-[#f4b942]">
+                    Courses
                   </Link>
                 </li>
                 <li>
-                  <Link href="/mentors" className="text-muted-foreground hover:text-foreground">
-                    Mentors
+                  <Link href="/about" className="text-white/80 transition-colors hover:text-[#f4b942]">
+                    About Acadova
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about" className="text-muted-foreground hover:text-foreground">
-                    About
+                  <Link href="/apply" className="text-white/80 transition-colors hover:text-[#f4b942]">
+                    Enquiries
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="space-y-3">
-              <h4 className="font-heading text-sm">Social</h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">
-                    Twitter
-                  </a>
-                </li>
-                <li>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">
-                    LinkedIn
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-3">
-              <h4 className="font-heading text-sm">Legal</h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href="/privacy" className="text-muted-foreground hover:text-foreground">
-                    Privacy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/terms" className="text-muted-foreground hover:text-foreground">
-                    Terms
-                  </Link>
-                </li>
-              </ul>
+              <h2 className="text-xs font-bold uppercase tracking-[0.16em] text-white/50">
+                Keep in touch
+              </h2>
+              <a
+                href="mailto:hello@acadova.edu"
+                className="text-sm text-white/80 transition-colors hover:text-[#f4b942]"
+              >
+                hello@acadova.edu
+              </a>
             </div>
           </div>
         </div>
-        <div className="text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Accelerator Program. All rights reserved.
+
+        <div className="mt-10 border-t border-white/15 pt-5 text-xs text-white/50">
+          © {new Date().getFullYear()} Acadova. Learn. Grow. Lead.
         </div>
       </div>
     </footer>

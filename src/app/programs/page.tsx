@@ -1,141 +1,193 @@
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
+import {
+  ArrowRight,
+  BriefcaseBusiness,
+  Check,
+  Clock3,
+  Code2,
+  HeartPulse,
+  Lightbulb,
+  Palette,
+  Users,
+} from 'lucide-react';
+
+const programs = [
+  {
+    id: 'business-entrepreneurship',
+    category: 'Business',
+    title: 'Business & Entrepreneurship',
+    description:
+      'Build a strong foundation in business, explore new ideas, and learn how to bring them to life.',
+    duration: '8 weeks',
+    format: 'Online, instructor-led',
+    icon: BriefcaseBusiness,
+    tone: 'bg-[#e6f0ed] text-[#007c85]',
+    skills: ['Business fundamentals', 'Customer discovery', 'Pitch with purpose'],
+  },
+  {
+    id: 'data-science-ai',
+    category: 'Technology',
+    title: 'Data Science & AI',
+    description:
+      'Develop practical data skills and discover how responsible AI can help solve real problems.',
+    duration: '12 weeks',
+    format: 'Online, project-based',
+    icon: Code2,
+    tone: 'bg-[#e8edf4] text-[#0b2d52]',
+    skills: ['Data storytelling', 'AI foundations', 'Applied projects'],
+  },
+  {
+    id: 'design-creative-practice',
+    category: 'Creative',
+    title: 'Design & Creative Practice',
+    description:
+      'Explore the craft of design, from early concepts to thoughtful digital experiences.',
+    duration: '10 weeks',
+    format: 'Online, studio sessions',
+    icon: Palette,
+    tone: 'bg-[#fbf0d7] text-[#8a6010]',
+    skills: ['Visual thinking', 'Design systems', 'Portfolio project'],
+  },
+  {
+    id: 'wellbeing-psychology',
+    category: 'Wellbeing',
+    title: 'Wellbeing & Psychology',
+    description:
+      'Explore the science of wellbeing and develop everyday tools for a more balanced life.',
+    duration: '6 weeks',
+    format: 'Online, self-paced',
+    icon: HeartPulse,
+    tone: 'bg-[#f8e8e7] text-[#a14848]',
+    skills: ['Psychology essentials', 'Everyday resilience', 'Reflective practice'],
+  },
+  {
+    id: 'leadership-communication',
+    category: 'Leadership',
+    title: 'Leadership & Communication',
+    description:
+      'Grow your confidence as a leader and learn to bring people together around shared goals.',
+    duration: '8 weeks',
+    format: 'Online, instructor-led',
+    icon: Users,
+    tone: 'bg-[#eee8f5] text-[#694b87]',
+    skills: ['Clear communication', 'Collaborative leadership', 'Giving feedback'],
+  },
+  {
+    id: 'climate-sustainability',
+    category: 'Society',
+    title: 'Climate & Sustainability',
+    description:
+      'Understand the forces shaping our climate and find practical ways to contribute to change.',
+    duration: '6 weeks',
+    format: 'Online, self-paced',
+    icon: Lightbulb,
+    tone: 'bg-[#edf0de] text-[#617634]',
+    skills: ['Climate literacy', 'Systems thinking', 'Solutions in action'],
+  },
+];
 
 export default function ProgramsPage() {
-  const programs = [
-    {
-      id: 'early-stage-program',
-      title: 'Early Stage Program',
-      description: 'Perfect for startups in the ideation or MVP phase',
-      duration: '3 months',
-      features: [
-        'Weekly mentoring sessions with industry experts',
-        'Workshops on product development and market validation',
-        'Access to seed funding opportunities',
-        'Co-working space access',
-        'Technical resources and cloud credits',
-        'Demo day presentation opportunity'
-      ],
-      requirements: [
-        'MVP or well-developed concept',
-        'Full-time commitment from founders',
-        'Based in or willing to relocate temporarily',
-        'Strong growth potential'
-      ]
-    },
-    {
-      id: 'growth-stage-program',
-      title: 'Growth Stage Program',
-      description: 'For startups ready to scale their operations',
-      duration: '6 months',
-      features: [
-        'Dedicated mentor team',
-        'Strategic partnership opportunities',
-        'Series A fundraising preparation',
-        'International market access',
-        'Advanced growth marketing workshops',
-        'Enterprise customer introductions'
-      ],
-      requirements: [
-        'Existing product with market traction',
-        'Revenue generating or significant user base',
-        'Strong team in place',
-        'Clear scaling strategy'
-      ]
-    }
-  ];
-
   return (
-    <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="relative py-20 bg-muted/50">
-        <div className="container">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="font-heading text-4xl font-bold sm:text-5xl">Our Programs</h1>
-            <p className="mt-6 text-xl text-muted-foreground">
-              Choose the right program for your startup's stage and accelerate your growth
+    <div>
+      <section className="bg-[#0b2d52] text-white">
+        <div className="mx-auto max-w-7xl px-6 py-16 sm:px-8 sm:py-20">
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#f4b942]">
+            Find your next step
+          </p>
+          <div className="mt-4 grid gap-6 lg:grid-cols-[1fr_0.7fr] lg:items-end">
+            <h1 className="max-w-2xl font-heading text-4xl font-bold leading-tight tracking-[-0.04em] sm:text-5xl">
+              A course for every kind of curious.
+            </h1>
+            <p className="max-w-xl leading-7 text-white/70">
+              Explore flexible, expert-led learning across business, technology, creativity, and
+              more. Your next chapter can start right here.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Programs Detail Section */}
-      <section className="py-20">
-        <div className="container">
-          <div className="grid gap-20">
-            {programs.map((program) => (
-              <div key={program.id} id={program.id} className="scroll-mt-16">
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-3xl">{program.title}</CardTitle>
-                    <CardDescription className="text-lg">{program.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent className="grid gap-8 lg:grid-cols-2">
-                    <div className="space-y-6">
-                      <div>
-                        <h3 className="font-heading text-xl font-semibold">Duration</h3>
-                        <p className="mt-2 text-muted-foreground">{program.duration}</p>
-                      </div>
-                      <div>
-                        <h3 className="font-heading text-xl font-semibold">Program Features</h3>
-                        <ul className="mt-2 space-y-2">
-                          {program.features.map((feature, index) => (
-                            <li key={index} className="flex items-center text-muted-foreground">
-                              <svg
-                                className="mr-2 h-4 w-4 text-primary"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M5 13l4 4L19 7"
-                                />
-                              </svg>
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="space-y-6">
-                      <div>
-                        <h3 className="font-heading text-xl font-semibold">Requirements</h3>
-                        <ul className="mt-2 space-y-2">
-                          {program.requirements.map((requirement, index) => (
-                            <li key={index} className="flex items-center text-muted-foreground">
-                              <svg
-                                className="mr-2 h-4 w-4 text-primary"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M5 13l4 4L19 7"
-                                />
-                              </svg>
-                              {requirement}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div className="pt-6">
-                        <Link href="/apply">
-                          <Button size="lg" className="w-full">Apply Now</Button>
-                        </Link>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            ))}
+      <section className="mx-auto max-w-7xl px-6 py-14 sm:px-8 sm:py-20">
+        <div className="mb-9 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#007c85]">
+              Explore Acadova
+            </p>
+            <h2 className="mt-2 font-heading text-2xl font-bold text-[#0b2d52] sm:text-3xl">
+              Find a subject that sparks something.
+            </h2>
           </div>
+          <p className="text-sm text-[#64707b]">{programs.length} learning paths to explore</p>
+        </div>
+
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {programs.map((program) => {
+            const Icon = program.icon;
+
+            return (
+              <article
+                key={program.id}
+                id={program.id}
+                className="flex scroll-mt-28 flex-col rounded-3xl border border-[#e5e3dc] bg-white p-6"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <span className="pt-2 text-xs font-bold uppercase tracking-[0.14em] text-[#64707b]">
+                    {program.category}
+                  </span>
+                  <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ${program.tone}`}>
+                    <Icon className="h-6 w-6" aria-hidden="true" />
+                  </span>
+                </div>
+                <h2 className="mt-6 font-heading text-xl font-bold text-[#0b2d52]">
+                  {program.title}
+                </h2>
+                <p className="mt-3 min-h-[4.5rem] text-sm leading-6 text-[#64707b]">
+                  {program.description}
+                </p>
+                <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 border-y border-[#eeece6] py-4 text-xs font-bold text-[#596574]">
+                  <span className="flex items-center gap-1.5">
+                    <Clock3 className="h-4 w-4 text-[#007c85]" aria-hidden="true" />
+                    {program.duration}
+                  </span>
+                  <span>{program.format}</span>
+                </div>
+                <ul className="mt-5 space-y-2.5">
+                  {program.skills.map((skill) => (
+                    <li key={skill} className="flex items-center gap-2 text-sm text-[#596574]">
+                      <Check className="h-4 w-4 shrink-0 text-[#007c85]" aria-hidden="true" />
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href="/apply"
+                  className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-[#007c85] transition-colors hover:text-[#0b2d52]"
+                >
+                  Ask about this course
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </Link>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 pb-16 sm:px-8 sm:pb-20">
+        <div className="flex flex-col gap-5 rounded-3xl bg-[#e6f0ed] p-7 sm:flex-row sm:items-center sm:justify-between sm:p-10">
+          <div>
+            <h2 className="font-heading text-2xl font-bold text-[#0b2d52]">
+              Not sure where to start?
+            </h2>
+            <p className="mt-2 max-w-xl text-sm leading-6 text-[#596574]">
+              Tell us what you&apos;re curious about and we&apos;ll help you find a good fit.
+            </p>
+          </div>
+          <Link
+            href="/apply"
+            className="inline-flex h-11 shrink-0 items-center justify-center gap-2 self-start rounded-full bg-[#007c85] px-5 text-sm font-bold text-white transition-colors hover:bg-[#00656c] sm:self-auto"
+          >
+            Talk to our team
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Link>
         </div>
       </section>
     </div>

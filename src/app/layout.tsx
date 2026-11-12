@@ -5,8 +5,9 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Accelerator Program",
-  description: "Empowering startups to reach their full potential",
+  title: "Acadova | Learn. Grow. Lead.",
+  description:
+    "Discover flexible, expert-led courses at Acadova, a digital learning institution for curious minds.",
 };
 
 export default function RootLayout({
