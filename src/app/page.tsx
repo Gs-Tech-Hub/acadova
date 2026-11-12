@@ -312,6 +312,35 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="mx-auto max-w-7xl px-6 pb-20 sm:px-8 sm:pb-24">
+        <div className="flex flex-col gap-6 rounded-3xl border border-[#e5e3dc] bg-white p-7 sm:flex-row sm:items-center sm:justify-between sm:p-9">
+          <div className="flex items-start gap-4">
+            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#e6f0ed] text-[#007c85]">
+              <GraduationCap className="h-6 w-6" aria-hidden="true" />
+            </span>
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.14em] text-[#007c85]">
+                Student management
+              </p>
+              <h2 className="mt-1 font-heading text-xl font-bold text-[#0b2d52] sm:text-2xl">
+                Registration and course management, in one place.
+              </h2>
+              <p className="mt-2 max-w-2xl text-sm leading-6 text-[#64707b]">
+                Our student portal brings course registration, learner enrollments, and staff
+                catalog management together.
+              </p>
+            </div>
+          </div>
+          <Link
+            href="/portal"
+            className="inline-flex h-11 shrink-0 items-center justify-center gap-2 self-start rounded-full bg-[#007c85] px-5 text-sm font-bold text-white transition-colors hover:bg-[#00656c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0b2d52] sm:self-auto"
+          >
+            Explore the portal
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }

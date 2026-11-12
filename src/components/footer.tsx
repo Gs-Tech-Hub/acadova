@@ -42,6 +42,11 @@ export function Footer() {
                     Enquiries
                   </Link>
                 </li>
+                <li>
+                  <Link href="/portal" className="text-white/80 transition-colors hover:text-[#f4b942]">
+                    Student portal
+                  </Link>
+                </li>
               </ul>
             </div>
             <div className="space-y-3">

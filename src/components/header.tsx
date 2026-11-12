@@ -5,6 +5,7 @@ import { ThemeToggle } from '@/components/theme-toggle';
 const links = [
   { href: '/programs', label: 'Courses' },
   { href: '/about', label: 'About Acadova' },
+  { href: '/portal', label: 'Student portal' },
 ];
 
 export function Header() {
@@ -28,7 +29,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`${link.href === '/about' ? 'hidden sm:inline-flex' : 'inline-flex'} rounded-full px-3 py-2 text-xs font-bold text-[#425162] transition-colors hover:bg-white hover:text-[#007c85] sm:px-4 sm:text-sm`}
+              className={`${link.href === '/about' ? 'hidden sm:inline-flex' : link.href === '/portal' ? 'hidden md:inline-flex' : 'inline-flex'} rounded-full px-3 py-2 text-xs font-bold text-[#425162] transition-colors hover:bg-white hover:text-[#007c85] sm:px-4 sm:text-sm`}
             >
               {link.label}
             </Link>
@@ -37,8 +38,14 @@ export function Header() {
             <ThemeToggle />
           </div>
           <Link
+            href="/portal"
+            className="inline-flex h-10 items-center justify-center rounded-full bg-[#0b2d52] px-4 text-xs font-bold text-white transition-colors hover:bg-[#174674] sm:hidden"
+          >
+            Portal
+          </Link>
+          <Link
             href="/apply"
-            className="inline-flex h-10 items-center justify-center rounded-full bg-[#0b2d52] px-4 text-xs font-bold text-white transition-colors hover:bg-[#174674] sm:px-5 sm:text-sm"
+            className="hidden h-10 items-center justify-center rounded-full bg-[#0b2d52] px-4 text-xs font-bold text-white transition-colors hover:bg-[#174674] sm:inline-flex sm:px-5 sm:text-sm"
           >
             Enquire
           </Link>
