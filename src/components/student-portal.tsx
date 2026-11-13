@@ -76,6 +76,62 @@ const initialCourses: Course[] = [
     duration: '6 weeks',
     description: 'Find practical ways to contribute to a more sustainable future.',
   },
+  {
+    id: 'app-identity-interface-design',
+    title: 'App Identity & Interface Design',
+    category: 'Development',
+    duration: '6 weeks',
+    description: 'Create a clear, memorable brand and intuitive product experience.',
+  },
+  {
+    id: 'student-registration-profiles',
+    title: 'Student Registration & Profiles',
+    category: 'Development',
+    duration: '5 weeks',
+    description: 'Design a smooth onboarding flow and personal learner experience.',
+  },
+  {
+    id: 'learning-management-system',
+    title: 'Learning Management System',
+    category: 'Development',
+    duration: '8 weeks',
+    description: 'Map learning journeys, content, and progress in one system.',
+  },
+  {
+    id: 'courses-digital-classrooms',
+    title: 'Courses & Digital Classrooms',
+    category: 'Development',
+    duration: '7 weeks',
+    description: 'Build engaging online learning spaces for participation and progress.',
+  },
+  {
+    id: 'examinations-certification',
+    title: 'Examinations & Certification',
+    category: 'Development',
+    duration: '6 weeks',
+    description: 'Create fair assessments and meaningful recognition for achievement.',
+  },
+  {
+    id: 'ai-learning-assistant',
+    title: 'AI Learning Assistant',
+    category: 'Development',
+    duration: '5 weeks',
+    description: 'Design helpful AI support that builds confidence and clarity.',
+  },
+  {
+    id: 'negotiation-simulation-centre',
+    title: 'Negotiation Simulation Centre',
+    category: 'Development',
+    duration: '8 weeks',
+    description: 'Practice high-stakes conversations in a realistic training environment.',
+  },
+  {
+    id: 'international-expansion',
+    title: 'International Expansion',
+    category: 'Development',
+    duration: '7 weeks',
+    description: 'Prepare a scalable learning model for global growth and inclusion.',
+  },
 ];
 
 const categoryIcons: Record<string, typeof BookOpen> = {
@@ -85,6 +141,7 @@ const categoryIcons: Record<string, typeof BookOpen> = {
   Wellbeing: HeartPulse,
   Leadership: Users,
   Society: Lightbulb,
+  Development: LayoutDashboard,
 };
 
 const categoryStyles: Record<string, string> = {
@@ -94,6 +151,7 @@ const categoryStyles: Record<string, string> = {
   Wellbeing: 'bg-[#f8e8e7] text-[#a14848]',
   Leadership: 'bg-[#eee8f5] text-[#694b87]',
   Society: 'bg-[#edf0de] text-[#617634]',
+  Development: 'bg-[#edf6f7] text-[#145f67]',
 };
 
 type PortalMode = 'student' | 'staff';
